@@ -15,9 +15,9 @@ jobs:
       - run:
           name: Build and push Docker image
           command: |
-            docker build -t dotnetaksdemo.azurecr.io/dotnetapi-aks-app:$CIRCLE_SHA1 .
-            echo $AZURE_SP_PASSWORD | docker login dotnetaksdemo.azurecr.io -u $AZURE_SP --password-stdin
-            docker push dotnetaksdemo.azurecr.io/dotnetapi-aks-app:$CIRCLE_SHA1
+            docker build -t dotnetaksdemon01649102.azurecr.io/dotnetapi-aks-app:$CIRCLE_SHA1 .
+            echo $AZURE_SP_PASSWORD | docker login dotnetaksdemon01649102.azurecr.io -u $AZURE_SP --password-stdin
+            docker push dotnetaksdemon01649102.azurecr.io/dotnetapi-aks-app:$CIRCLE_SHA1
   aks-deploy:
     docker:
       - image: cimg/base:2023.05
